@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirish</title>
+</head>
+<body>
+    <h2>Kirish</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Foydalanuvchi nomi:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Parol:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Kirish</button>
+        <a href="{% provider_login_url 'google' %}" data-provider="google">Google orqali kirish</a>
+
+    </form>
+</body>
+</html>
